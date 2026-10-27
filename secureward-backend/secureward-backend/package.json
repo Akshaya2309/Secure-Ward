@@ -1,0 +1,12 @@
+{
+  "name": "secureward-backend",
+  "version": "1.0.0",
+  "description": "SecureWard OS - Correctional Facility Management System (Node.js REST API, zero dependencies)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "engines": { "node": ">=16" },
+  "license": "MIT"
+}

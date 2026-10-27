@@ -1,0 +1,55 @@
+// Initial data for data.json (mirrors the frontend's offline SEED_DATA)
+module.exports = {
+  inmates: [
+    { id: 1042, name: "Ravi Kumar", crime: "Burglary", cellId: "B-14", sentenceYrs: 5, admitDate: "2023-03-15", status: "Active", riskLevel: "Medium", notes: "Cooperative, assigned to laundry workshop duty. High alert contraband history.", bloodGroup: "O+", dob: "1994-06-22" },
+    { id: 1051, name: "Arun Prasad", crime: "Fraud", cellId: "A-03", sentenceYrs: 3, admitDate: "2024-01-10", status: "Active", riskLevel: "Low", notes: "White-collar inmate. Assists with library cataloguing.", bloodGroup: "B+", dob: "1988-11-04" },
+    { id: 1063, name: "Selvam M", crime: "Assault", cellId: "C-21", sentenceYrs: 7, admitDate: "2022-08-19", status: "Isolation", riskLevel: "High", notes: "Placed in solitary confinement following physical aggression during yard time.", bloodGroup: "A+", dob: "1991-02-14" },
+    { id: 1075, name: "Karthik V", crime: "Theft", cellId: "B-09", sentenceYrs: 2, admitDate: "2025-05-12", status: "Active", riskLevel: "Low", notes: "Good conduct, eligible for parole review in Q2.", bloodGroup: "AB+", dob: "1997-09-30" },
+    { id: 1087, name: "Mohan S", crime: "Assault", cellId: "C-18", sentenceYrs: 4, admitDate: "2023-11-20", status: "Active", riskLevel: "Medium", notes: "Reprimanded for dining hall dispute. Enrolled in anger management.", bloodGroup: "O-", dob: "1993-08-18" },
+    { id: 1094, name: "Imran Khan", crime: "Forgery", cellId: "A-11", sentenceYrs: 1, admitDate: "2025-10-01", status: "Released", riskLevel: "Low", notes: "Sentence completed with full remission. Formal discharge filed.", bloodGroup: "A-", dob: "1995-12-05" }
+  ],
+  cells: [
+    { id: "A-03", block: "Block A", cellNo: "03", capacity: 2, securityLevel: "Minimum", wing: "East Wing", isLocked: true },
+    { id: "A-11", block: "Block A", cellNo: "11", capacity: 2, securityLevel: "Minimum", wing: "East Wing", isLocked: true },
+    { id: "B-09", block: "Block B", cellNo: "09", capacity: 4, securityLevel: "Medium", wing: "North Wing", isLocked: true },
+    { id: "B-14", block: "Block B", cellNo: "14", capacity: 4, securityLevel: "Medium", wing: "North Wing", isLocked: true },
+    { id: "C-18", block: "Block C", cellNo: "18", capacity: 2, securityLevel: "Maximum", wing: "South Wing", isLocked: true },
+    { id: "C-21", block: "Block C", cellNo: "21", capacity: 1, securityLevel: "Maximum", wing: "South Wing", isLocked: true },
+    { id: "D-01", block: "Block D", cellNo: "01", capacity: 1, securityLevel: "High / Solitary", wing: "Isolation Bunker", isLocked: true },
+    { id: "D-02", block: "Block D", cellNo: "02", capacity: 1, securityLevel: "High / Solitary", wing: "Isolation Bunker", isLocked: true }
+  ],
+  incidents: [
+    { id: 1, inmateId: 1042, inmateName: "Ravi Kumar", date: "2026-10-12", time: "14:20", type: "Contraband in cell", severity: "High", action: "Isolation 3 days", location: "Cell B-14", officer: "Officer J. Vance", status: "Resolved" },
+    { id: 2, inmateId: 1087, inmateName: "Mohan S", date: "2026-10-11", time: "12:45", type: "Altercation", severity: "Medium", action: "Warning issued", location: "Dining Hall B", officer: "Officer K. Raman", status: "Closed" },
+    { id: 3, inmateId: 1063, inmateName: "Selvam M", date: "2026-10-09", time: "07:00", type: "Refused roll call", severity: "Low", action: "Counselling", location: "Block C Corridor", officer: "Sgt. D. Thomas", status: "Closed" },
+    { id: 4, inmateId: 1075, inmateName: "Karthik V", date: "2026-10-06", time: "18:30", type: "Unauthorised item", severity: "Medium", action: "Privilege review", location: "Recreation Yard", officer: "Officer M. Stewart", status: "Closed" },
+    { id: 5, inmateId: 1051, inmateName: "Arun Prasad", date: "2026-10-02", time: "10:15", type: "Verbal dispute", severity: "Low", action: "Warning issued", location: "Library Annex", officer: "Officer R. Nathan", status: "Closed" },
+    { id: 6, inmateId: 1063, inmateName: "Selvam M", date: "2026-09-28", time: "16:40", type: "Assault on inmate", severity: "High", action: "Isolation 7 days", location: "Main Exercise Yard", officer: "Captain H. Miller", status: "Resolved" }
+  ],
+  visits: [
+    { id: 1, inmateId: 1042, inmateName: "Ravi Kumar", visitorName: "Lakshmi R", relation: "Spouse", visitDate: "2026-10-14 10:30", status: "Scheduled", booth: "Booth 02", idProof: "Govt Photo ID (Verified)" },
+    { id: 2, inmateId: 1051, inmateName: "Arun Prasad", visitorName: "Suresh P", relation: "Brother", visitDate: "2026-10-14 11:15", status: "Scheduled", booth: "Booth 04", idProof: "Passport (Verified)" },
+    { id: 3, inmateId: 1075, inmateName: "Karthik V", visitorName: "Meena V", relation: "Mother", visitDate: "2026-10-13 14:00", status: "Completed", booth: "Booth 01", idProof: "Aadhaar Card (Verified)" },
+    { id: 4, inmateId: 1094, inmateName: "Imran Khan", visitorName: "Adv. S Rao", relation: "Lawyer", visitDate: "2026-10-13 15:00", status: "Completed", booth: "Legal Suite A", idProof: "Bar Council Credential" },
+    { id: 5, inmateId: 1063, inmateName: "Selvam M", visitorName: "Ganesh M", relation: "Friend", visitDate: "2026-10-12 10:00", status: "Denied", booth: "N/A", idProof: "Flagged - Disciplinary Restriction Active" },
+    { id: 6, inmateId: 1087, inmateName: "Mohan S", visitorName: "Revathi S", relation: "Wife", visitDate: "2026-10-11 11:00", status: "Completed", booth: "Booth 03", idProof: "Govt Photo ID (Verified)" }
+  ],
+  medical: [
+    { id: 1, inmateId: 1042, inmateName: "Ravi Kumar", checkupDate: "2026-10-13", condition: "Minor laceration right arm", treatment: "Antiseptic dressing & Tetanus toxoid booster administered. Routine follow-up 48h.", doctor: "Dr. Sarah Paul, MD", triage: "Routine" },
+    { id: 2, inmateId: 1063, inmateName: "Selvam M", checkupDate: "2026-10-12", condition: "Stress induced hypertension (BP 155/95)", treatment: "Amlodipine 5mg daily. Psychiatric evaluation scheduled.", doctor: "Dr. A. Verma, MBBS", triage: "Priority" },
+    { id: 3, inmateId: 1075, inmateName: "Karthik V", checkupDate: "2026-10-10", condition: "Acute bronchitis", treatment: "Azithromycin 500mg, steam inhalation therapy.", doctor: "Dr. Sarah Paul, MD", triage: "Routine" },
+    { id: 4, inmateId: 1051, inmateName: "Arun Prasad", checkupDate: "2026-10-08", condition: "Dental caries with localized abscess", treatment: "Amoxicillin 500mg, analgesics, extraction scheduled.", doctor: "Dr. G. Sundaram, BDS", triage: "Routine" },
+    { id: 5, inmateId: 1087, inmateName: "Mohan S", checkupDate: "2026-10-05", condition: "Contusion facial zygomatic area", treatment: "Ice compression, Ibuprofen 400mg, cleared for regular cell block.", doctor: "Dr. Sarah Paul, MD", triage: "Priority" }
+  ],
+  // Facility-wide figures that aren't derivable from the sample records above.
+  // totalInmates / visitsToday are computed as "baseline + records in this DB".
+  facilityStats: {
+    baselineInmates: 143,        // 148 total at seed time minus the 5 active sample inmates
+    capacity: 180,
+    baselineVisitsToday: 12,
+    pendingMedicalCheckups: 5,
+    activeGuardsOnDuty: 24,
+    lockdownActive: false,
+    defconLevel: "DEFCON 4 - NORMAL SECURE"
+  }
+};
